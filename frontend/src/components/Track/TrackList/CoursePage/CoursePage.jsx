@@ -63,12 +63,12 @@ function CoursePageOutro() {
         <div className='py-12 max-w-[90rem] mx-auto px-8 bg-[#EDF0F6]'>
             {/* <p className='text-center text-4xl'>{courseSlug}</p> */}
 
-            <div className='grid grid-cols-3 space-x-10'>
-                <div className='col-span-2 grid-cols-10 grid bg-[#0D132C] h-[60vh] text-white rounded-2xl p-10 '>
+            <div className='grid md:grid-cols-3 md:space-x-10 grid-cols-1 gap-4'>
+                <div className='md:col-span-2 col-span-1 grid-cols-10 grid bg-[#0D132C] h-[60vh] text-white rounded-2xl p-10 '>
 
-                    <div className='col-span-8 flex flex-col justify-between'>
+                    <div className='md:col-span-8 col-span-10 flex flex-col justify-between'>
 
-                        <div className='flex space-x-4'>
+                        <div className='md:flex hidden space-x-4'>
                             <button className='text-xl px-4 py-2 rounded-full bg-white text-[#0D132C] font-medium' >
                                 Duration : {courseDetails.duration}
                             </button>
@@ -79,7 +79,7 @@ function CoursePageOutro() {
                         </div>
 
                         <div className='flex flex-col'>
-                            <span className='text-7xl font-semibold p-4'>
+                            <span className='md:text-7xl text-3xl font-semibold p-4'>
                                 {courseDetails.title}
                             </span>
                             <span className='text-2xl p-2'>
@@ -90,7 +90,7 @@ function CoursePageOutro() {
                             </span>
                         </div>
 
-                        <div className='flex space-x-4'>
+                        <div className='flex md:flex-row flex-col md:space-y-0 space-y-4 space-x-4'>
 
                             {courseDetails.test &&
                                 <button className='bg-blue-500 font-semibold px-6 py-2 text-2xl rounded-lg'>
@@ -121,17 +121,17 @@ function CoursePageOutro() {
 
                     </div>
 
-                    <div className='col-span-2'>
+                    <div className='md:inline hidden col-span-2'>
                         5 Star
                     </div>
                 </div>
-                <div className='col-span-1 bg-[#0D132C] h-[60vh] rounded-2xl'>
+                <div className='col-span-1 bg-[#0D132C] md:h-[60vh] rounded-2xl'>
                     <img className='p-12' src="https://static.tildacdn.com/tild6261-3863-4965-a435-636633666138/Frame_48097850.svg" alt="" />
                 </div>
 
             </div>
 
-            <div className='flex bg-white p-4 mt-6 rounded-xl justify-around'>
+            <div className='md:flex hidden bg-white p-4 mt-6 rounded-xl justify-around'>
                 <div className='flex flex-col w-80  '>
                     <span className='text-black font-semibold py-1 text-lg'>
                         {courseDetails.level[0].level}
@@ -173,19 +173,19 @@ function CoursePageOutro() {
 
             </div>
 
-            <div className='bg-[#D6DFEB] p-12 rounded-2xl mt-12 pt-12 pb-8'>
-                <span className='text-6xl tracking-tighter font-semibold pb-8' >
+            <div className='bg-[#D6DFEB] md:p-12 p-4 rounded-2xl mt-12 md:pt-12 pb-8'>
+                <span className='md:text-6xl text-2xl tracking-tighter font-semibold pb-8' >
                     For whom is the course
                 </span>
 
 
-                <div className='grid grid-cols-2 gap-8 p-4'>
+                <div className='grid md:grid-cols-2 md:gap-8 grid-cols-1 gap-4 md:p-4'>
                     {courseDetails.for_whom.map((data) => (
                         <div key={courseDetails.course_id} className='p-4 bg-white rounded-2xl '>
-                            <span className='text-3xl py-4'>
+                            <span className='md:text-3xl text-lg py-4'>
                                 {data.title}
                             </span>
-                            <ul className='list-disc ml-6 text-xl'>
+                            <ul className='list-disc ml-6 md:text-xl text-base'>
                                 <li className='py-2'>
                                     {data.point1}
                                 </li>
@@ -208,32 +208,32 @@ function CoursePageOutro() {
             </div>
 
             <div className='py-12'>
-                <span className='text-5xl font-semibold'>
+                <span className='md:text-5xl text-2xl font-semibold'>
                     The course will help you figure it out
                 </span>
 
-                <div className='h-[450px] bg-[#0D132C] mt-4 p-8 grid grid-cols-6 grid-rows-2 gap-8 rounded-2xl'>
-                    <span className='col-span-3 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                <div className='md:h-[450px] bg-[#0D132C] mt-4 p-8 grid md:grid-cols-6 md:grid-rows-2 md:gap-8 grid-cols-1 rounded-2xl'>
+                    <span className='md:col-span-3 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
                         {courseDetails.help_out[0]}
                     </span>
-                    <span className='col-span-3 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-3 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
                         {courseDetails.help_out[1]}
                     </span>
-                    <span className='col-span-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
                         {courseDetails.help_out[2]}
                     </span>
-                    <span className='col-span-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
                         {courseDetails.help_out[3]}
                     </span>
-                    <span className='col-span-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
                         {courseDetails.help_out[4]}
                     </span>
                 </div>
             </div>
 
 
-            <div className='grid grid-cols-5 gap-8'>
-                <div className='col-span-2 w-full bg-[#D6DFEB] p-6 rounded-2xl'>
+            <div className='grid md:grid-cols-5 gap-8'>
+                <div className='md:col-span-2 col-span-1 w-full bg-[#D6DFEB] p-6 rounded-2xl'>
                     <span className='text-3xl font-medium'>
                         Knowledge will be required:
                     </span>
@@ -251,7 +251,7 @@ function CoursePageOutro() {
                         </li>
                     </ul>
                 </div>
-                <div className='col-span-3 w-full bg-white p-6 rounded-2xl'>
+                <div className='md:col-span-3 col-span-1 w-full bg-white p-6 rounded-2xl'>
                     <span className='text-3xl font-medium'>
                         It will be a big plus:
                     </span>
@@ -271,12 +271,12 @@ function CoursePageOutro() {
             </div>
 
 
-            <div className='h-screen py-12 flex flex-col space-y-8'>
-                <span className='text-6xl font-semibold tracking-tight p-4'>
+            <div className='md:h-screen py-12 flex flex-col space-y-8'>
+                <span className='md:text-6xl text-2xl font-semibold tracking-tight p-4'>
                     After the course you can
                 </span>
-                <div className='grid grid-cols-3 gap-8 h-[70vh]'>
-                    <div className='col-span-1 grid grid-rows-3 gap-8 h-full'>
+                <div className='grid md:grid-cols-3 grid-cols-1 gap-8 md:h-[70vh]'>
+                    <div className='col-span-1 grid grid-rows-3 gap-8 md:h-full'>
                         <div className='row-span-1 bg-white rounded-2xl p-8 text-xl'>
                             {courseDetails.after_course[0]}
                         </div>
@@ -287,11 +287,11 @@ function CoursePageOutro() {
                             {courseDetails.after_course[2]}
                         </div>
                     </div>
-                    <div className='col-span-1 grid grid-rows-3 gap-8 h-full'>
+                    <div className='col-span-1 grid md:grid-rows-3 gap-8 h-full'>
                         <div className='row-span-1 h-full rounded-2xl bg-white p-8 text-xl'>
                             {courseDetails.after_course[3]}
                         </div>
-                        <div className='row-span-2 flex justify-center'>
+                        <div className='md:row-span-2 md:flex hidden justify-center'>
                             <img className='w-80' src="https://optim.tildacdn.com/tild6536-6135-4137-a431-666662363665/-/resize/506x/-/format/webp/_2.png" alt="" />
                         </div>
                     </div>
@@ -311,10 +311,10 @@ function CoursePageOutro() {
             </div>
 
             <div className='py-12'>
-                <span className='text-6xl tracking-tighter font-semibold py-8'>
+                <span className='md:text-6xl text-2xl tracking-tighter font-semibold py-8'>
                     You will create one project to choose from
                 </span>
-                <div className='grid grid-cols-2 gap-8 py-4'>
+                <div className='grid md:grid-cols-2 grid-cols-1 gap-8 py-4'>
                     <div className='p-8 bg-[#D6DFEB] rounded-2xl col-span-1'>
                         <p className='text-2xl font-semibold py-2'>
                             {courseDetails.projects[0].title}
@@ -352,19 +352,19 @@ function CoursePageOutro() {
             </div>
 
 
-            <div className='py-12 h-screen grid grid-cols-8 gap-8'>
-                <div className='h-full col-span-3 bg-white rounded-2xl p-8'>
-                    <p className='text-5xl font-semibold'>
+            <div className='py-12 md:h-screen grid md:grid-cols-8 grid-cols-1 gap-8'>
+                <div className='h-full md:col-span-3 col-span-1 bg-white rounded-2xl p-8'>
+                    <p className='md:text-5xl text-2xl font-semibold'>
                         Course speaker
                     </p>
-                    <div className='w-80 h-80'>
-                        <img src={courseDetails.speaker_info_img_url} alt="" />
+                    <div className='w-full h-auto'>
+                        <img className='rounded-xl' src={courseDetails.speaker_info_img_url} alt="" />
                     </div>
                     <div>
                         <p className='px-4 pt-6 pb-2 text-2xl font-semibold'>
                             {courseDetails.speaker_info_details[0]}
                         </p>
-                        <ul className='list-disc ml-6 pr-4 text-xl'>
+                        <ul className='list-disc ml-6 md:pr-4 text-xl'>
                             <li className='py-1'>
                                 {courseDetails.speaker_info_details[1]}
                             </li>
@@ -387,12 +387,12 @@ function CoursePageOutro() {
                     </div>
                 </div>
 
-                <div className='h-full col-span-5 grid grid-rows-2 gap-8'>
+                <div className='h-full md:col-span-5 col-span-1 grid md:grid-rows-2 gap-8'>
                     <div className='row-span-1 bg-white rounded-2xl p-8'>
-                        <p className='text-5xl font-semibold'>
+                        <p className='md:text-5xl text-2xl font-semibold'>
                             Introductory lecture
                         </p>
-                        <div className='grid grid-cols-2 gap-8'>
+                        <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
                             <div className='col-span-1'>
                                 <VideoPlayer videoId={1} />
                             </div>
@@ -421,10 +421,10 @@ function CoursePageOutro() {
                         </div>
                     </div>
                     <div className='row-span-1 bg-white rounded-2xl p-8'>
-                        <p className='text-5xl font-semibold'>
+                        <p className='md:text-5xl text-2xl font-semibold'>
                             Reviews
                         </p>
-                        <div className='grid grid-cols-2 gap-4 py-4'>
+                        <div className='grid md:grid-cols-2 grid-cols-1 gap-y-14 gap-4 py-4'>
                             <span>
                                 <span className='text-lg'>
                                     Pryanka clearly knows her Go and her courses are a great way to level up your own knowledge and understanding. I like the cool mix of interactivity and conceptual walkthroughs in the course.
@@ -459,25 +459,25 @@ function CoursePageOutro() {
 
             {/* fetch Index-Section from section */}
             <div className='py-12'>
-                <p className='text-6xl font-medium py-4'>
+                <p className='md:text-6xl text-2xl font-medium py-4'>
                     Program
                 </p>
                 <Accordion subtopic_id={id} />
             </div>
 
-            <div className='grid grid-cols-7 gap-8'>
-                <div className='col-span-5 bg-[#D6DFEB] p-8 flex flex-col space-y-4 rounded-2xl'>
-                    <p className='text-6xl font-semibold'>
+            <div className='grid md:grid-cols-7 grid-cols-1 gap-8'>
+                <div className='md:col-span-5 col-span-1 bg-[#D6DFEB] p-8 flex flex-col space-y-4 rounded-2xl'>
+                    <p className='md:text-6xl text-2xl font-semibold'>
                         Certificate
                     </p>
-                    <span className='pr-28 text-xl '>
+                    <span className='md:pr-28 text-xl '>
                         To each student who passes the 80% course, we will present a certificate of completion. And one who successfully fulfills more than 80% of practical tasks and protects the final project — will receive a number certificate
                     </span>
 
                 </div>
 
 
-                <div className='col-span-2 bg-white rounded-2xl'>
+                <div className='md:col-span-2 col-span-1 bg-white rounded-2xl'>
                     okio
                 </div>
             </div>

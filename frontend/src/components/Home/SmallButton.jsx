@@ -7,7 +7,7 @@ function SmallButton({ text1, text2, color,link,courseID,trackID }) {
         localStorage.setItem('CourseId', courseID);  // Save trackId to localStorage
     };
     return (
-        <Link to={link} onClick={() => handleLinkClick(courseID,trackID)} className='flex drop-shadow-lg hover:bg-blue-500 hover:text-white col-span-1 items-center space-x-4 bg-white p-2 rounded-xl px-4'>
+        <Link to={link} onClick={() => handleLinkClick(courseID,trackID)} className='flex drop-shadow-lg hover:bg-blue-500 hover:text-white md:col-span-1 col-span-4 items-center space-x-4 bg-white p-2 rounded-xl px-4'>
             <div>
                 <div className={`bg-${color}-400 h-12 w-12 flex items-center justify-center rounded-lg`}>
                     <span className='text-3xl'>

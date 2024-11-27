@@ -12,7 +12,7 @@ function Card({ bookName, authorName, imgURL, pdfURL }) {
         
     };
     return (
-        <div className='bg-white w-72 p-4 shadow-md rounded-lg col-span-1' >
+        <div className='bg-white mx-auto w-72 p-4 shadow-md rounded-lg md:col-span-1 col-span-4' >
             <div className='flex justify-between items-baseline pb-2'>
                 <span className='text-xl font-semibold '>{bookName}</span>
                 <span className='font-semibold text-sm'>{authorName}</span>

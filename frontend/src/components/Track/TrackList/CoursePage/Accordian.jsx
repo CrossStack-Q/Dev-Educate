@@ -32,12 +32,12 @@ function Accordion({subtopic_id}) {
                         onClick={() => toggleAccordion(index)}
                     >
                         <div className="flex items-center space-x-4">
-                            <span className="px-4 py-2 w-36 text-white text-xl rounded-full bg-[#5C76FF]">
+                            <span className="px-4 py-2 w-36 text-white md:text-xl text-base rounded-full bg-[#5C76FF]">
                                 Section{" "}{index}
                             </span>
-                            <h3 className="text-3xl">{item.name}</h3>
+                            <h3 className="md:text-3xl text-lg">{item.name}</h3>
                         </div>
-                        <button className="text-4xl">
+                        <button className="md:text-4xl text-lg">
                             {openIndex === index ? "−" : "+"}
                         </button>
                     </div>

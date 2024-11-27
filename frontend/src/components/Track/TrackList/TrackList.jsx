@@ -63,13 +63,13 @@ function TrackList() {
 
     return (
         <div className='max-w-7xl mx-auto hidescroll overflow-y-scroll h-[92vh]'>
-            <div>
+            <div className='md:inline hidden'>
                 <img className='max-w-7xl' src={catalogImg} alt="" />
             </div>
             <div className='text-3xl pt-8 text-center font-semibold'>
                 {trackSlug.toUpperCase()} COURSES
             </div>
-            <div className='grid grid-cols-2 gap-12 pt-4'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-12 pt-4 pb-12 md:px-0 px-4'>
                 {courses.map((course) => (
                     <Link className='col-span-1 drop-shadow-2xl rounded-xl border border-transparent' key={course.name} to={course.name} onClick={() => handleLinkClick(course.id)} >
                         <Card key={course.id} trackName={course.name} imgSrc={course.img_url} level={course.level} desc={course.description}  users={`Enrolled: ${course.users_enrolled}`} />

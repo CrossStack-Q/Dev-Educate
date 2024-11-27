@@ -4,13 +4,13 @@ import discord from "../../assets/discord.png"
 function Discord() {
   return (
     <div className='flex flex-col items-center py-12'>
-      <span className='text-4xl font-semibold'>
+      <span className='md:text-4xl text-xl font-semibold'>
         TO JOIN DISCORD CHANNEL
       </span>
-      <span className='text-4xl pt-2 font-semibold'>
+      <span className='md:text-4xl text-xl pt-2 font-semibold'>
         SCAN THIS QR
       </span>
-      <img src={discord} className='w-80 h-80 py-2' alt="" />
+      <img src={discord} className='md:w-80 md:h-80 w-60 h-60 py-2' alt="" />
       <span className='text-2xl pt-4 pb-2'>
         OR
       </span>

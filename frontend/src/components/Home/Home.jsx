@@ -5,18 +5,18 @@ import mainBG from "../../assets/mainBG.png"
 
 function Home() {
   return (
-    <div className='max-w-7xl mx-auto py-8 flex-col space-y-6 flex hidescroll overflow-y-hidden h-[92vh]'>
+    <div className='max-w-7xl mx-auto py-8 px-2 flex-col space-y-6 flex hidescroll overflow-y-scroll h-[92vh]'>
       <div className='flex rounded-lg drop-shadow-xl bg-blue-600 p-8'>
         <div className='flex flex-col space-y-16 md:flex-[0.6]'>
-          <span className='text-white text-xl'>ONLINE LEARNING PLATFORM</span>
-          <span className='text-white font-bold text-5xl'>
+          <span className='text-white md:text-xl text-sm'>ONLINE LEARNING PLATFORM</span>
+          <span className='text-white font-bold md:text-5xl text-2xl'>
             Enhance Your Skills with <br /> Professional Online Courses
           </span>
           <span className='rounded-full bg-zinc-900 text-white px-4 py-2 w-fit flex items-center space-x-2'>
-            <span className='text-xl'>
+            <span className='md:text-xl text-base'>
               JOIN NOW
             </span>
-            <div className='bg-white w-8 h-8 text-2xl text-black rounded-full flex items-center justify-center'>
+            <div className='bg-white w-8 h-8 md:text-2xl text-lg text-black rounded-full flex items-center justify-center'>
               {">"}
             </div>
           </span>
@@ -31,7 +31,7 @@ function Home() {
         <SmallButton text1="11 Enrolled" text2="GO COHORT" color="red" trackID={1} courseID={3} link="track/golang/Go Cohort" />
         <SmallButton text1="52 Enrolled" text2="BACKEND" color="red" trackID={1} courseID={4} link="track/golang/Backend Engineering with Go" />
       </div>
-      <div className='grid grid-cols-5 gap-8 px-2 pt-4'>
+      <div className='grid grid-cols-5 md:gap-8 gap-4 px-2 pt-4'>
         <LargeButton width={1} text1="Over 4,000 students have trusted YMCA Faridabad for their education and career growth." />
         <LargeButton width={1} text1="95% of our learners successfully became skilled engineers in their respective fields." />
         <LargeButton width={2} text1="YMCA Faridabad is known for transforming students into professionals through excellent education. Our students at YMCA Faridabad consistently excel in their careers and professional growth." />

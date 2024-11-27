@@ -27,12 +27,12 @@ function Jobs() {
 
 
     return (
-        <div className='max-w-7xl mx-auto py-8 hidescroll overflow-y-scroll h-[92vh]'>
-            <div className='rounded-xl bg-white drop-shadow-lg flex justify-around text-4xl py-4 px-8'>
+        <div className='max-w-7xl mx-auto py-8 md:px-0 px-4 hidescroll overflow-y-scroll h-[92vh]'>
+            <div className='rounded-xl bg-white drop-shadow-lg md:flex hidden justify-around text-4xl py-4 px-8'>
                 <span>Jobs</span><span>Salaries</span><span>Companies</span><span> Developers</span>
             </div>
-            <div className='grid grid-cols-2 gap-8 p-4 pb-12'>
-                <span className='text-8xl rounded-xl drop-shadow-lg bg-white text-zinc-800 flex flex-col justify-center items-center col-span-1 font-bold'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-8 p-4 pb-12'>
+                <span className='xl:text-8xl lg:text-6xl md:text-6xl md:py-0 py-4 text-2xl rounded-xl drop-shadow-lg bg-white text-zinc-800 flex flex-col justify-center items-center col-span-1 font-bold'>
                     <span>
                         GET UR
                     </span>
@@ -48,10 +48,10 @@ function Jobs() {
 
             <div className='px-8 py-8'>
                 <div className='flex justify-around items-center'>
-                    <span className='text-3xl'>
+                    <span className='md:text-3xl text-xl'>
                         Get Your Job Here
                     </span>
-                    <span className='bg-blue-400 text-white text-3xl py-2 px-6 rounded-md font-semibold '>
+                    <span className='bg-blue-400 text-white md:text-3xl text-lg py-2 md:px-6 px-2 rounded-md font-semibold '>
                         Post a Job
                     </span>
                 </div>
@@ -66,7 +66,7 @@ function Jobs() {
                 </div>
             </div>
 
-            <main className='grid grid-cols-2 grid-rows-subgrid gap-8'>
+            <main className='grid md:grid-cols-2 grid-cols-1 grid-rows-subgrid gap-8'>
                 {jobs.map((job, index) => (<JobCard key={job.job_id} index={index} jobID={job.job_id} jobTitle={job.title} jobCompany={job.company_name} jobLocation={job.location} jobSalaryMin={job.salary_min} jobSalaryMax={job.salary_max} jobDatePost={job.job_date_post} jobApplicants={job.applicants_this_week} />))}
             </main>
         </div>

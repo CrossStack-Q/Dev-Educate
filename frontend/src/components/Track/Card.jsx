@@ -5,8 +5,8 @@ function Card({ imgSrc, trackName, level, users, desc }) {
         <div className='p-4 bg-white rounded-xl '>
 
 
-            <div className='w-full h-80 overflow-hidden'>
-                <img src={imgSrc} alt="" className='w-full h-80 rounded-lg object-cover' />
+            <div className='w-full md:h-80 h-auto overflow-hidden'>
+                <img src={imgSrc} alt="" className='w-full md:h-80 h-auto rounded-lg object-cover' />
             </div>
             <p className='text-2xl text-center pt-2 font-bold'>{trackName}</p>
             {level && <div className='flex justify-between'>

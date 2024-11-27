@@ -50,17 +50,17 @@ function Track() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto pt-8 hidescroll overflow-y-scroll h-[92vh]">
+        <div className="max-w-7xl mx-auto pt-8 md:px-0 px-2 hidescroll overflow-y-scroll h-[92vh]">
             <div className=' w-full '>
                 <img className='w-full h-auto rounded-2xl shadow-zinc-600 shadow-md' src={TracksHome} alt="" />
             </div>
 
-            <p className='pt-12 text-5xl text-center font-bold'>
+            <p className='pt-12 md:text-5xl text-2xl text-center font-bold'>
                 TRACKS
             </p>
 
             
-            <div className="grid grid-cols-2 gap-8 p-4">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-8 p-4">
                 {tracks.map((track) => (
                     <Link key={track.param} to={track.param} onClick={() => handleLinkClick(track.id)} >
                         <Card imgSrc={track.img_url} trackName={track.name.toUpperCase()} />
