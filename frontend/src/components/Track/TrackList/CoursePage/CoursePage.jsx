@@ -181,7 +181,7 @@ function CoursePageOutro() {
 
                 <div className='grid grid-cols-2 gap-8 p-4'>
                     {courseDetails.for_whom.map((data) => (
-                        <div className='p-4 bg-white rounded-2xl '>
+                        <div key={courseDetails.course_id} className='p-4 bg-white rounded-2xl '>
                             <span className='text-3xl py-4'>
                                 {data.title}
                             </span>
