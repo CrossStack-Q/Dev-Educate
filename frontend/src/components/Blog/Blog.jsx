@@ -7,7 +7,7 @@ const Blog = () => {
 
   // Fetch all blogs when the component mounts
   useEffect(() => {
-    fetch('http://localhost:8080/blogs')  // Update to match the correct route from your Go backend
+    fetch('http://13.202.240.58:8080/blogs')  // Update to match the correct route from your Go backend
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error('Error fetching blogs:', err));

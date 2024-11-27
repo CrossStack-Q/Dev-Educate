@@ -13,7 +13,7 @@ function Track() {
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                const response = await fetch('http://localhost:8080/tracks');
+                const response = await fetch('http://13.202.240.58:8080/tracks');
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }

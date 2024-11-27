@@ -18,7 +18,7 @@ const UserQuiz = () => {
     setLoading(true); 
     try {
       const response = await fetch(
-        `http://localhost:8080/quiz?track_id=${track_id}&subtopic_id=${subtopic_id}`
+        `http://13.202.240.58:8080/quiz?track_id=${track_id}&subtopic_id=${subtopic_id}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch quiz data");

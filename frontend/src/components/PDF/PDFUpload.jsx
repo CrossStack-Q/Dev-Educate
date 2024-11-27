@@ -27,7 +27,7 @@ const PdfUpload = () => {
       formData.append('track_id', 1);  // Assuming track_id is 1 for now
   
       try {
-          const response = await fetch('http://localhost:8080/uploadpdf', {
+          const response = await fetch('http://13.202.240.58:8080/uploadpdf', {
               method: 'POST',
               body: formData,
           });

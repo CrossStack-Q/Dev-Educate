@@ -21,7 +21,7 @@ function CoursePageOutro() {
     useEffect(() => {
         const fetchCourseDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/courseDetails?track_id=${trackID}&course_id=${courseID}`);
+                const response = await fetch(`http://13.202.240.58:8080/courseDetails?track_id=${trackID}&course_id=${courseID}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }

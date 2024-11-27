@@ -12,7 +12,7 @@
 
 // //   useEffect(() => {
 // //     const fetchData = async () => {
-// //       const response = await fetch(`http://localhost:8080/courseindex?subtopic_id=${subtopic_id}`);
+// //       const response = await fetch(`http://13.202.240.58:8080/courseindex?subtopic_id=${subtopic_id}`);
 // //       if (!response.ok) {
 // //         throw new Error("Failed to fetch sections");
 // //       }
@@ -84,7 +84,7 @@
 //     setIsYouTube(null); // Reset isYouTube state
 
 //     // Fetch video details from the new YouTube API
-//     const response = await fetch(`http://localhost:8080/youtubevideo?id=${videoId}`);
+//     const response = await fetch(`http://13.202.240.58:8080/youtubevideo?id=${videoId}`);
 //     if (!response.ok) {
 //       console.error("Failed to fetch video data");
 //       return;
@@ -103,7 +103,7 @@
 
 //   useEffect(() => {
 //     const fetchData = async () => {
-//       const response = await fetch(`http://localhost:8080/courseindex?subtopic_id=${subtopic_id}`);
+//       const response = await fetch(`http://13.202.240.58:8080/courseindex?subtopic_id=${subtopic_id}`);
 //       if (!response.ok) {
 //         throw new Error("Failed to fetch sections");
 //       }
@@ -187,7 +187,7 @@ const TutorialsPage = () => {
     setIsYouTube(null); // Reset isYouTube state
 
     // Fetch video details from the new YouTube API
-    const response = await fetch(`http://localhost:8080/youtubevideo?id=${videoId}`);
+    const response = await fetch(`http://13.202.240.58:8080/youtubevideo?id=${videoId}`);
     if (!response.ok) {
       console.error("Failed to fetch video data");
       return;
@@ -206,7 +206,7 @@ const TutorialsPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:8080/courseindex?subtopic_id=${subtopic_id}`);
+      const response = await fetch(`http://13.202.240.58:8080/courseindex?subtopic_id=${subtopic_id}`);
       if (!response.ok) {
         throw new Error("Failed to fetch sections");
       }

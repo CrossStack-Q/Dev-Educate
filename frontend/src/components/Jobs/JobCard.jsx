@@ -10,7 +10,7 @@ function JobCard({ jobID, index, jobTitle, jobCompany, jobLocation, jobSalaryMin
     useEffect(() => {
         const fetchJobDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/job?id=${jobID}`);
+                const response = await fetch(`http://13.202.240.58:8080/job?id=${jobID}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch job details');
                 }

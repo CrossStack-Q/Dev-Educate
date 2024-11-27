@@ -12,7 +12,7 @@ function SepBlog() {
 
     // Fetch the blog data when the component mounts
     useEffect(() => {
-        fetch(`http://localhost:8080/blog?id=${id}`)
+        fetch(`http://13.202.240.58:8080/blog?id=${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setBlog(data); // Set the fetched blog data into state

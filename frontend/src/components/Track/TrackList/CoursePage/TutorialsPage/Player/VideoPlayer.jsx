@@ -9,7 +9,7 @@ const VideoPlayer = ({ videoId }) => {
     const fetchVideo = async () => {
       try {
         setIsLoading(true); // Start loading
-        const response = await fetch(`http://localhost:8080/videos?id=${videoId}`);
+        const response = await fetch(`http://13.202.240.58:8080/videos?id=${videoId}`);
         if (!response.ok) {
           throw new Error('Failed to load video');
         }

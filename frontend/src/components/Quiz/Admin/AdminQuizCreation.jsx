@@ -20,7 +20,7 @@ function AdminQuizCreation() {
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                const response = await fetch('http://localhost:8080/tracks');
+                const response = await fetch('http://13.202.240.58:8080/tracks');
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }
@@ -43,7 +43,7 @@ function AdminQuizCreation() {
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/course?id=${selectedTrack}`);
+                const response = await fetch(`http://13.202.240.58:8080/course?id=${selectedTrack}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }
@@ -74,7 +74,7 @@ function AdminQuizCreation() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:8080/courseindex?subtopic_id=${selectedCourse}`);
+            const response = await fetch(`http://13.202.240.58:8080/courseindex?subtopic_id=${selectedCourse}`);
             if (!response.ok) {
                 throw new Error("Failed to fetch sections");
             }
@@ -154,7 +154,7 @@ function AdminQuizCreation() {
             }))
         };
 
-        fetch('http://localhost:8080/admin/quiz', {
+        fetch('http://13.202.240.58:8080/admin/quiz', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(quizData),
