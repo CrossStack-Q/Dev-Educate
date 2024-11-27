@@ -213,19 +213,19 @@ function CoursePageOutro() {
                 </span>
 
                 <div className='md:h-[450px] bg-[#0D132C] mt-4 p-8 grid md:grid-cols-6 md:grid-rows-2 md:gap-8 grid-cols-1 rounded-2xl'>
-                    <span className='md:col-span-3 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-3 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center md:text-2xl text-base text-center px-4'>
                         {courseDetails.help_out[0]}
                     </span>
-                    <span className='md:col-span-3 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-3 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center md:text-2xl text-base text-center px-4'>
                         {courseDetails.help_out[1]}
                     </span>
-                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center md:text-2xl text-base text-center px-4'>
                         {courseDetails.help_out[2]}
                     </span>
-                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center md:text-2xl text-base text-center px-4'>
                         {courseDetails.help_out[3]}
                     </span>
-                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center text-2xl text-center px-4'>
+                    <span className='md:col-span-2 col-span-1 md:m-0 my-2 md:py-0 py-2 bg-white rounded-2xl flex flex-col justify-center md:text-2xl text-base text-center px-4'>
                         {courseDetails.help_out[4]}
                     </span>
                 </div>
@@ -234,7 +234,7 @@ function CoursePageOutro() {
 
             <div className='grid md:grid-cols-5 gap-8'>
                 <div className='md:col-span-2 col-span-1 w-full bg-[#D6DFEB] p-6 rounded-2xl'>
-                    <span className='text-3xl font-medium'>
+                    <span className='md:text-3xl text-2xl font-medium'>
                         Knowledge will be required:
                     </span>
 
@@ -252,7 +252,7 @@ function CoursePageOutro() {
                     </ul>
                 </div>
                 <div className='md:col-span-3 col-span-1 w-full bg-white p-6 rounded-2xl'>
-                    <span className='text-3xl font-medium'>
+                    <span className='md:text-3xl text-2xl font-medium'>
                         It will be a big plus:
                     </span>
 
