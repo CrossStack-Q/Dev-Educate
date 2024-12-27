@@ -12,7 +12,7 @@ function SepBlog() {
 
     
     useEffect(() => {
-        fetch(`http://localhost:8080/blog?id=${id}`)
+        fetch(`process.env.Backend_URL/blog?id=${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setBlog(data); 

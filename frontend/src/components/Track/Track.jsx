@@ -13,7 +13,7 @@ function Track() {
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                const response = await fetch('http://localhost:8080/tracks');
+                const response = await fetch('process.env.Backend_URL/tracks');
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }

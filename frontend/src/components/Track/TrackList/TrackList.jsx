@@ -18,7 +18,7 @@ function TrackList() {
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/course?id=${id}`);
+                const response = await fetch(`process.env.Backend_URL/course?id=${id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }

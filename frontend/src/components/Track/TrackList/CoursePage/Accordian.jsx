@@ -10,7 +10,7 @@ function Accordion({subtopic_id}) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:8080/courseindex?subtopic_id=${subtopic_id}`);
+            const response = await fetch(`process.env.Backend_URL/courseindex?subtopic_id=${subtopic_id}`);
             if (!response.ok) {
                 throw new Error("Failed to fetch sections");
             }

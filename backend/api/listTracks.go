@@ -34,7 +34,7 @@ func ListCourseHandler(w http.ResponseWriter, r *http.Request) {
 	// Enable CORS if needed
 	utils.EnableCors(w, r)
 
-	// Extract 'id' from query string, e.g. http://localhost:8080/golang?id=1
+	// Extract 'id' from query string, e.g. process.env.Backend_URL/golang?id=1
 	idStr := r.URL.Query().Get("id")
 	if idStr == "" {
 		http.Error(w, "Missing 'id' parameter", http.StatusBadRequest)

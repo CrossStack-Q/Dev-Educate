@@ -52,7 +52,7 @@ const CreateBlog = () => {
         if (image) formData.append('image', image);
 
         try {
-            const response = await fetch('http://localhost:8080/createBlog', {
+            const response = await fetch('process.env.Backend_URL/createBlog', {
                 method: 'POST',
                 body: formData,
             });

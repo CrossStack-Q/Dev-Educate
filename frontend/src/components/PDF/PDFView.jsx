@@ -14,7 +14,7 @@ const PDFView = () => {
     useEffect(() => {
         const fetchBooks = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/books?track_id=${trackID}`);
+                const response = await fetch(`process.env.Backend_URL/books?track_id=${trackID}`);
                 if (response.ok) {
                     const bookData = await response.json();
                     setBooks(bookData);  

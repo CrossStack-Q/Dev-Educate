@@ -15,7 +15,7 @@ const TutorialsPage = () => {
     setIsYouTube(null); 
 
     
-    const response = await fetch(`http://localhost:8080/youtubevideo?id=${videoId}`);
+    const response = await fetch(`process.env.Backend_URL/youtubevideo?id=${videoId}`);
     if (!response.ok) {
       console.error("Failed to fetch video data");
       return;
@@ -39,7 +39,7 @@ const TutorialsPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:8080/courseindex?subtopic_id=${subtopic_id}`);
+      const response = await fetch(`process.env.Backend_URL/courseindex?subtopic_id=${subtopic_id}`);
       if (!response.ok) {
         throw new Error("Failed to fetch sections");
       }
