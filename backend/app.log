@@ -1,0 +1,7 @@
+nohup: ignoring input
+Database Connected
+Database Connected
+Database Connected
+2024/12/06 07:28:25 http: superfluous response.WriteHeader call from blog-app/api.AuthHandler (loginRoutes.go:63)
+2024/12/06 07:28:39 http: superfluous response.WriteHeader call from blog-app/api.AuthHandler (loginRoutes.go:63)
+2024/12/06 07:29:10 http: superfluous response.WriteHeader call from blog-app/api.AuthHandler (loginRoutes.go:63)
