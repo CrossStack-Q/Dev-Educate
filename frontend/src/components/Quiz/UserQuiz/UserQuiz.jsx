@@ -18,7 +18,7 @@ const UserQuiz = () => {
     setLoading(true); 
     try {
       const response = await fetch(
-        `process.env.Backend_URL/quiz?track_id=${track_id}&subtopic_id=${subtopic_id}`
+        `${import.meta.env.VITE_BACKEND_URL}/quiz?track_id=${track_id}&subtopic_id=${subtopic_id}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch quiz data");

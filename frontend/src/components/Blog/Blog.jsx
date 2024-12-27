@@ -7,7 +7,7 @@ const Blog = () => {
 
   
   useEffect(() => {
-    fetch(`${process.env.Backend_URL}/blogs`)  
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/blogs`)  
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error('Error fetching blogs:', err));

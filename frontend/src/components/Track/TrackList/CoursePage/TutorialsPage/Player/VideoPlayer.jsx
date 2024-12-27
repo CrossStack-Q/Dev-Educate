@@ -9,7 +9,7 @@ const VideoPlayer = ({ videoId }) => {
     const fetchVideo = async () => {
       try {
         setIsLoading(true); 
-        const response = await fetch(`process.env.Backend_URL/videos?id=${videoId}`);
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/videos?id=${videoId}`);
         if (!response.ok) {
           throw new Error('Failed to load video');
         }

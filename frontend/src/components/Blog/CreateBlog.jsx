@@ -52,7 +52,7 @@ const CreateBlog = () => {
         if (image) formData.append('image', image);
 
         try {
-            const response = await fetch('process.env.Backend_URL/createBlog', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/createBlog`, {
                 method: 'POST',
                 body: formData,
             });

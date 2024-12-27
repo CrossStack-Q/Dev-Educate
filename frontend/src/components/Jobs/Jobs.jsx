@@ -14,7 +14,7 @@ function Jobs() {
 
     useEffect(() => {
         const fetchJobs = async () => {
-            const response = await fetch(`process.env.Backend_URL/jobs`);
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/jobs`);
             if (!response.ok) {
                 throw new Error("Failed to fetch sections");
             }

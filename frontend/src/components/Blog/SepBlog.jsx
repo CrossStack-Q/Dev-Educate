@@ -12,7 +12,7 @@ function SepBlog() {
 
     
     useEffect(() => {
-        fetch(`process.env.Backend_URL/blog?id=${id}`)
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/blog?id=${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setBlog(data); 

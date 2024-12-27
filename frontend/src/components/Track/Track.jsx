@@ -13,7 +13,7 @@ function Track() {
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                const response = await fetch('process.env.Backend_URL/tracks');
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/tracks`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch tracks');
                 }

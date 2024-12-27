@@ -10,7 +10,7 @@ function JobCard({ jobID, index, jobTitle, jobCompany, jobLocation, jobSalaryMin
     useEffect(() => {
         const fetchJobDetails = async () => {
             try {
-                const response = await fetch(`process.env.Backend_URL/job?id=${jobID}`);
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/job?id=${jobID}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch job details');
                 }

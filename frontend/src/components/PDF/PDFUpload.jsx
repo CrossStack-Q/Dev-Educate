@@ -27,7 +27,7 @@ const PdfUpload = () => {
         formData.append('track_id', 1);  // track_id is 1 for now temp
 
         try {
-            const response = await fetch('process.env.Backend_URL/uploadpdf', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/uploadpdf`, {
                 method: 'POST',
                 body: formData,
             });
